@@ -370,33 +370,89 @@ ul {
     margin-left: 90px;
 }
 /* skill name */
-.tag ul li {
+/* .tag ul li {
     margin: 0px 6px;
     border-radius: 4px;
     margin-bottom: 10px;
     padding: 4px;
-    overflow: hidden;
-    overflow-x: hidden;
-    overflow-y: hidden;
     display: block;
+    width: 80px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0,0,10);
+    overflow: hidden;
+
+
+} */
+.tag
+{
+  position: relative;
+  width: 80px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0,0,10);
+  overflow: hidden;
+  border-radius: 1px;
+  margin: 0 2px;
+  padding: 2px 5px;
+
+}
+.tag::before
+{
+  content: '';
+  position: absolute;
+  width: 85px;
+  height: 60%;
+  background: linear-gradient(#00ccff, #d400d4);
+  animation: animate 3s linear infinite;
+}
+.tag::after
+{
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background: #0F044C;
+  border-radius: 1px;
 }
 
-.tag ul li span {
+@keyframes animate
+{
+  0% {
+    transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+      }
+}
+.tag h1
+{
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  z-index: 10;
+
+}
+
+/*
+ .tag ul li span {
     content: "";
-    /* position: absolute; */
     top: 0;
     left: 0;
     width: 200%;
     height: 100%;
     /* border: 3px solid; */
-    border-bottom: 3px linear-gradient(101deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
-    background-image: linear-gradient(140deg, rgb(250, 214, 72), rgb(167, 103, 229), rgb(18, 188, 254), rgb(68, 206, 123));
+     /* border: 3px linear-gradient(#101deg,#4fcf70,#fad648,#a767e5,#12bcfe,#44ce7b);
+       background: linear-gradient(140deg, rgb(250, 214, 72), rgb(167, 103, 229), rgb(18, 188, 254));
     background-position-x: initial;
     background-position-y: initial;
-    background-size: 50% 100%;
+     background-size: 50% 100%;
     padding: 4px 10px;
     border-radius: 4px;
-}
+} */
 
 
 .tag ul li span:hover {
@@ -407,9 +463,10 @@ ul {
 .btn-danger {
     background-color: #a0e368;
     color: #fff;
-    padding: 14px 20px;
+    padding: 15px 20px;
     border: none;
     border-radius: 40px;
+    margin-top: 16px;
 }
 -
 .mh-service-item {
@@ -576,7 +633,7 @@ ul {
     -webkit-animation-duration: 1s;
     -webkit-animation-name: animationProgress;
     font-family: 'Sacramento', cursive;
-  
+
 
 }
 
